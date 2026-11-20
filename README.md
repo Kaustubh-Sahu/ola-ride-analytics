@@ -1,14 +1,21 @@
 # Ola Ride Booking Analytics: SQL + Power BI + Streamlit
 
-End-to-end analytics project: **MySQL queries → Power BI dashboard → interactive Streamlit web app**.
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://aknmdqkvx2rll4ps72koz5.streamlit.app/)
 
-- `sql/` – MySQL database setup and the 10 analysis views
-- `powerbi/` – the original Power BI dashboard (`OlaDashboard.pbix`, open with Power BI Desktop)
-- the Streamlit app (this folder's root) – web version of the dashboard
+**Live demo:** https://aknmdqkvx2rll4ps72koz5.streamlit.app/
 
-An interactive analytics app built from an existing **SQL + Power BI** project on Ola ride-booking data
-(103,024 bookings, July 2024). It keeps the five report pages of the Power BI dashboard
-(Overall, Vehicle Type, Revenue, Cancellations, Ratings) and reproduces every SQL view in Pandas.
+End-to-end analytics project: **MySQL queries → Power BI dashboard → interactive Streamlit web app**
+on 103,024 Ola ride bookings (July 2024).
+
+- `sql/`: MySQL database setup and the 10 analysis views
+- `powerbi/`: the original Power BI dashboard (`OlaDashboard.pbix`, open with Power BI Desktop)
+- Streamlit app (project root): the web version of the dashboard
+
+> The free app goes to sleep when nobody has used it for a while. If you see a sleeping page, click
+> **"Yes, get this app back up!"** and wait about 30 seconds.
+
+## Tech stack
+Python · Streamlit · Pandas · Plotly · MySQL / SQLAlchemy · Power BI · SQL · pytest
 
 ## Screenshots
 
@@ -114,6 +121,8 @@ Incomplete_Rides, Incomplete_Rides_Reason, Booking_Value, Payment_Method, Ride_D
 A clear message is shown if a column is missing. To change the default, replace `data/OlaData.csv`.
 
 ## Connecting MySQL
+> MySQL mode works when you run the app **locally**. The hosted demo uses the bundled dataset
+> (and supports CSV / Excel upload), because a cloud app cannot reach a database on your own computer.
 1. Install MySQL and create the data. Either run your own import, or use the helper:
    ```powershell
    python scripts/load_csv_to_mysql.py --user root --password YOUR_PASSWORD
