@@ -1,0 +1,21 @@
+/* Ola-inspired dark theme: near-black surfaces, lime accent */
+:root { --lime:#C6F135; --bg:#0B0F14; --panel:#121821; --line:#1F2937; --muted:#8B98A9; --text:#F1F5F9; }
+.block-container { padding-top: 2rem; padding-bottom: 3rem; max-width: 1400px; }
+[data-testid="stSidebar"] { background: var(--panel); border-right: 1px solid var(--line); }
+[data-testid="stSidebar"] .block-container { padding-top: 1.5rem; }
+.brand { font-size: 1.35rem; font-weight: 800; color: var(--text); letter-spacing: -0.02em; display:flex; align-items:center; gap:.55rem; }
+.brand-dot { width:.8rem; height:.8rem; border-radius:50%; background: var(--lime); box-shadow: 0 0 14px rgba(198,241,53,.55); display:inline-block; }
+.brand-sub { color: var(--muted); font-size:.82rem; margin: .15rem 0 1rem 1.35rem; }
+.side-label { text-transform: uppercase; letter-spacing:.12em; font-size:.7rem; color: var(--muted); margin: 1.2rem 0 .4rem; }
+.page-title { font-size: 1.9rem; font-weight: 800; color: var(--text); letter-spacing: -0.02em; }
+.page-sub { color: var(--muted); margin: .1rem 0 1.2rem; font-size: .92rem; }
+.section { font-size: 1.05rem; font-weight: 700; color: var(--text); margin: 1.6rem 0 .5rem; padding-left: .6rem; border-left: 3px solid var(--lime); }
+.kpi-card { background: linear-gradient(180deg, #151C27 0%, #111720 100%); border: 1px solid var(--line);
+  border-radius: 14px; padding: 1rem 1.15rem; margin-bottom: 1rem; min-height: 118px; position: relative; overflow: hidden; }
+.kpi-card::before { content:""; position:absolute; left:0; top:0; bottom:0; width:3px; background: var(--lime); opacity:.85; }
+.kpi-label { color: var(--muted); font-size: .76rem; text-transform: uppercase; letter-spacing: .07em; }
+.kpi-value { color: var(--text); font-size: 1.75rem; font-weight: 800; margin: .3rem 0 .2rem; letter-spacing: -0.02em; line-height: 1.15; }
+.kpi-sub { color: #6B7A8D; font-size: .76rem; line-height: 1.3; }
+[data-testid="stPlotlyChart"] { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: .4rem .5rem; }
+[data-testid="stCaptionContainer"] { color: var(--muted); }
+@media (max-width: 900px) { .kpi-value { font-size: 1.4rem; } .page-title { font-size: 1.5rem; } }
