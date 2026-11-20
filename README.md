@@ -10,6 +10,40 @@ An interactive analytics app built from an existing **SQL + Power BI** project o
 (103,024 bookings, July 2024). It keeps the five report pages of the Power BI dashboard
 (Overall, Vehicle Type, Revenue, Cancellations, Ratings) and reproduces every SQL view in Pandas.
 
+## Screenshots
+
+Each page of the Power BI report was rebuilt as an interactive Streamlit page with extra filters, KPIs and charts.
+
+### Overall
+| Power BI | Streamlit |
+|---|---|
+| <img src="docs/screenshots/powerbi_overall.png" width="480"> | <img src="docs/screenshots/streamlit_dashboard.png" width="480"> |
+
+### Vehicle Type
+| Power BI | Streamlit |
+|---|---|
+| <img src="docs/screenshots/powerbi_vehicleType.png" width="480"> | <img src="docs/screenshots/streamlit_vehicleType.png" width="480"> |
+
+### Revenue
+| Power BI | Streamlit |
+|---|---|
+| <img src="docs/screenshots/powerbi_revenue.png" width="480"> | <img src="docs/screenshots/streamlit_revenueAnalysis.png" width="480"> |
+
+### Cancellations
+| Power BI | Streamlit |
+|---|---|
+| <img src="docs/screenshots/powerbi_cancellation.png" width="480"> | <img src="docs/screenshots/streamlit_cancellationAnalysis.png" width="480"> |
+
+### Ratings
+| Power BI | Streamlit |
+|---|---|
+| <img src="docs/screenshots/powerbi_rating.png" width="480"> | <img src="docs/screenshots/streamlit_ratingAnalysis.png" width="480"> |
+
+### Power BI vs Streamlit: what differs
+- **Booking value:** Power BI's Overall page shows 56,534,614, which includes the fares of cancelled bookings. The Streamlit app shows **₹3.51 Cr** (successful rides only) and notes the ₹5.65 Cr quoted total. Both apps agree on revenue: Power BI's Revenue page shows 35.08M.
+- **Cancellations:** the 28.08% matches in both. Power BI's "Total Cancellations" (28,933) is the sum of customer and driver cancellations (10,499 + 18,434).
+- **Extra in the app:** filters (date, vehicle, status, payment), CSV download, success rate, average ride distance, and the SQL view results in the data preview.
+
 ## Features
 - Sidebar navigation (5 pages) and filters: **date range, vehicle type, booking status, payment method**, with a **Clear filters** button. Every KPI and chart reacts to the filters.
 - Data from the **bundled dataset**, an **uploaded CSV / Excel** file, or **MySQL**.
